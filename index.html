@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SMTH</title>
+		<link rel="stylesheet" type="text/css" href="css\bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css\my_style.css">
+		<script type="text/javascript" src="jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="js\bootstrap.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('a[href^="#"').click(function(){
+					var target = $(this).attr('href');
+					$('html, body').animate({scrollTop: $(target).offset().top}, 800);
+					return false;
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div class='container'>
+			<div class='navbar navbar-fixed-top'>
+				<nav class='navbar-inner'>
+					<ul class="nav navbar-nav">
+						<li class='dropdown'>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="icon-list"></i>
+								PUSH ME
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href='#d1'>First</a></li>
+								<li><a href='#d2'>Second</a></li>
+								<li><a href='#d3'>Third</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+		<div id='d1' class="d" >
+			<h1>First!</h1>
+		</div>
+		<div id='d2' class="d">
+			<h1>Second!</h1>
+		</div>
+		<div id='d3' class="d">
+			<h1>Third!</h1>
+		</div>
+		<div class='d'>
+			<h3>One more div...</h3>
+		</div>
+	</body>
+</html>
